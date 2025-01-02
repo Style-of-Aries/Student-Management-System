@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QLSV_App.DAO;
 
 namespace QLSV_App
 {
@@ -42,10 +44,25 @@ namespace QLSV_App
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FormHome frmHome = new FormHome();
-            this.Hide();
-            frmHome.ShowDialog();
-            this.Show();
+            //string username = txtUserName.Text;
+            //string password = txtPassword.Text;
+            //if (Login(username, password))
+            //{
+            //    FormHome frmHome = new FormHome();
+            //    this.Hide();
+            //    frmHome.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            //}
+            try
+        }
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
     }
+    
 }

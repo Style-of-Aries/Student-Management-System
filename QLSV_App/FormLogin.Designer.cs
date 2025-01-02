@@ -32,9 +32,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.pnLogin = new System.Windows.Forms.Panel();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.pnBanner = new System.Windows.Forms.Panel();
             this.lblX = new System.Windows.Forms.Label();
@@ -64,9 +64,9 @@
             // pnLogin
             // 
             this.pnLogin.Controls.Add(this.lblPassword);
-            this.pnLogin.Controls.Add(this.textBox2);
+            this.pnLogin.Controls.Add(this.txtPassword);
             this.pnLogin.Controls.Add(this.lblUserName);
-            this.pnLogin.Controls.Add(this.textBox1);
+            this.pnLogin.Controls.Add(this.txtUserName);
             this.pnLogin.Controls.Add(this.lblLogin);
             this.pnLogin.Controls.Add(this.btnLogin);
             this.pnLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -85,13 +85,13 @@
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(66, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(66, 129);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(192, 22);
+            this.txtPassword.TabIndex = 3;
             // 
             // lblUserName
             // 
@@ -103,13 +103,13 @@
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "UserName";
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(66, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(66, 77);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(192, 22);
+            this.txtUserName.TabIndex = 3;
             // 
             // lblLogin
             // 
@@ -123,7 +123,7 @@
             // 
             // pnBanner
             // 
-            this.pnBanner.BackColor = System.Drawing.Color.Cyan;
+            this.pnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnBanner.Controls.Add(this.lblX);
             this.pnBanner.Controls.Add(this.label1);
             this.pnBanner.Dock = System.Windows.Forms.DockStyle.Top;
@@ -149,6 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(33, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 24);
@@ -195,11 +196,11 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel pnLogin;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Panel pnBanner;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
