@@ -81,7 +81,7 @@ namespace QLSV_App
                 {
                     if (Login(txtUserName.Text, txtPassword.Text, cboRole.Text))
                     {
-                        FormHome frmHome = new FormHome();
+                        FrmHome frmHome = new FrmHome();
                         this.Hide();
                         loginName = txtUserName.Text;
                         frmHome.ShowDialog();

@@ -1,6 +1,6 @@
 ﻿namespace QLSV_App
 {
-    partial class FormHome
+    partial class FrmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.pnBanner = new System.Windows.Forms.Panel();
             this.btnKhoa = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
@@ -146,6 +146,7 @@
             this.btnNganhHoc.TabIndex = 12;
             this.btnNganhHoc.Text = "Ngành học";
             this.btnNganhHoc.UseVisualStyleBackColor = false;
+            this.btnNganhHoc.Click += new System.EventHandler(this.btnNganhHoc_Click);
             // 
             // btnLopHoc
             // 
@@ -217,7 +218,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Management System";
             // 
-            // FormHome
+            // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +227,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnBanner);
-            this.Name = "FormHome";
+            this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Manager System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

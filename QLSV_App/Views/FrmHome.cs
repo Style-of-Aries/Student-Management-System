@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLSV_App.Core;
+using QLSV_App.Views;
 
 namespace QLSV_App
 {
-    public partial class FormHome : Form
+    public partial class FrmHome : Form
     {
         DBConnect db = new DBConnect();
-        public FormHome()
+        public FrmHome()
         {
             InitializeComponent();
         }
@@ -68,6 +69,12 @@ namespace QLSV_App
         {
             FrmTaiKhoan taiKhoan = new FrmTaiKhoan();
             taiKhoan.ShowDialog();
+        }
+
+        private void btnNganhHoc_Click(object sender, EventArgs e)
+        {
+            FrmNganh frmNganh = new FrmNganh();
+            frmNganh.ShowDialog();
         }
     }
 }
