@@ -40,6 +40,8 @@
             this.lblX = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cboRole = new System.Windows.Forms.ComboBox();
+            this.lblRole = new System.Windows.Forms.Label();
             this.pnLogin.SuspendLayout();
             this.pnBanner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,16 +55,18 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(112, 178);
+            this.btnLogin.Location = new System.Drawing.Point(119, 251);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(101, 38);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pnLogin
             // 
+            this.pnLogin.Controls.Add(this.lblRole);
+            this.pnLogin.Controls.Add(this.cboRole);
             this.pnLogin.Controls.Add(this.lblPassword);
             this.pnLogin.Controls.Add(this.txtPassword);
             this.pnLogin.Controls.Add(this.lblUserName);
@@ -72,32 +76,32 @@
             this.pnLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnLogin.Location = new System.Drawing.Point(0, 164);
             this.pnLogin.Name = "pnLogin";
-            this.pnLogin.Size = new System.Drawing.Size(323, 242);
-            this.pnLogin.TabIndex = 1;
+            this.pnLogin.Size = new System.Drawing.Size(323, 318);
+            this.pnLogin.TabIndex = 0;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(47, 110);
+            this.lblPassword.Location = new System.Drawing.Point(54, 183);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 16);
-            this.lblPassword.TabIndex = 1;
+            this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(66, 129);
+            this.txtPassword.Location = new System.Drawing.Point(73, 202);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(192, 22);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(47, 58);
+            this.lblUserName.Location = new System.Drawing.Point(54, 131);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(73, 16);
             this.lblUserName.TabIndex = 1;
@@ -106,10 +110,10 @@
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(66, 77);
+            this.txtUserName.Location = new System.Drawing.Point(73, 150);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(192, 22);
-            this.txtUserName.TabIndex = 3;
+            this.txtUserName.TabIndex = 1;
             // 
             // lblLogin
             // 
@@ -118,7 +122,7 @@
             this.lblLogin.Location = new System.Drawing.Point(131, 17);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(62, 24);
-            this.lblLogin.TabIndex = 7;
+            this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login";
             // 
             // pnBanner
@@ -130,7 +134,7 @@
             this.pnBanner.Location = new System.Drawing.Point(0, 0);
             this.pnBanner.Name = "pnBanner";
             this.pnBanner.Size = new System.Drawing.Size(323, 67);
-            this.pnBanner.TabIndex = 2;
+            this.pnBanner.TabIndex = 0;
             // 
             // lblX
             // 
@@ -141,7 +145,7 @@
             this.lblX.Location = new System.Drawing.Point(299, 9);
             this.lblX.Name = "lblX";
             this.lblX.Size = new System.Drawing.Size(21, 20);
-            this.lblX.TabIndex = 1;
+            this.lblX.TabIndex = 0;
             this.lblX.Text = "X";
             this.lblX.Click += new System.EventHandler(this.lblX_Click);
             // 
@@ -153,7 +157,7 @@
             this.label1.Location = new System.Drawing.Point(33, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 24);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Student Management System";
             // 
             // pictureBox1
@@ -166,13 +170,36 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // cboRole
+            // 
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.Items.AddRange(new object[] {
+            "Select Role",
+            "Admin",
+            "Manager"});
+            this.cboRole.Location = new System.Drawing.Point(73, 95);
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(192, 21);
+            this.cboRole.TabIndex = 4;
+            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.Location = new System.Drawing.Point(54, 76);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(36, 16);
+            this.lblRole.TabIndex = 5;
+            this.lblRole.Text = "Role";
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(323, 406);
+            this.ClientSize = new System.Drawing.Size(323, 482);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnBanner);
             this.Controls.Add(this.pnLogin);
@@ -204,6 +231,8 @@
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.ComboBox cboRole;
     }
 }
 

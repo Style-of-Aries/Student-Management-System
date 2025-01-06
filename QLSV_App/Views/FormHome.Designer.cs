@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.pnBanner = new System.Windows.Forms.Panel();
             this.btnKhoa = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTenHienThi = new System.Windows.Forms.Label();
             this.btnNganhHoc = new System.Windows.Forms.Button();
             this.btnLopHoc = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@
             // 
             this.pnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnBanner.Controls.Add(this.btnKhoa);
+            this.pnBanner.Controls.Add(this.btnTaiKhoan);
             this.pnBanner.Controls.Add(this.panel1);
             this.pnBanner.Controls.Add(this.btnNganhHoc);
             this.pnBanner.Controls.Add(this.btnLopHoc);
@@ -76,18 +78,39 @@
             this.btnKhoa.UseVisualStyleBackColor = false;
             this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
             // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.Location = new System.Drawing.Point(12, 76);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(235, 52);
+            this.btnTaiKhoan.TabIndex = 15;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblRole);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnTaiKhoan);
             this.panel1.Controls.Add(this.lblTenHienThi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 70);
             this.panel1.TabIndex = 18;
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(69, 42);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(0, 13);
+            this.lblRole.TabIndex = 18;
             // 
             // pictureBox1
             // 
@@ -101,27 +124,16 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // btnTaiKhoan
-            // 
-            this.btnTaiKhoan.BackColor = System.Drawing.Color.White;
-            this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.Location = new System.Drawing.Point(146, 11);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(109, 25);
-            this.btnTaiKhoan.TabIndex = 15;
-            this.btnTaiKhoan.Text = "Tài khoản";
-            this.btnTaiKhoan.UseVisualStyleBackColor = false;
-            // 
             // lblTenHienThi
             // 
             this.lblTenHienThi.AutoSize = true;
-            this.lblTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenHienThi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblTenHienThi.Location = new System.Drawing.Point(65, 17);
             this.lblTenHienThi.Name = "lblTenHienThi";
-            this.lblTenHienThi.Size = new System.Drawing.Size(75, 16);
+            this.lblTenHienThi.Size = new System.Drawing.Size(0, 20);
             this.lblTenHienThi.TabIndex = 17;
-            this.lblTenHienThi.Text = "Tên hiển thị";
+            this.lblTenHienThi.Click += new System.EventHandler(this.lblTenHienThi_Click);
             // 
             // btnNganhHoc
             // 
@@ -163,6 +175,7 @@
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.White;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Location = new System.Drawing.Point(0, 569);
@@ -215,9 +228,10 @@
             this.Controls.Add(this.pnBanner);
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormHome";
+            this.Text = "Student Manager System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHome_FormClosing);
+            this.Load += new System.EventHandler(this.FormHome_Load);
             this.pnBanner.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -238,10 +252,11 @@
         private System.Windows.Forms.Button btnLopHoc;
         private System.Windows.Forms.Button btnSinhVien;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTenHienThi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnKhoa;
+        private System.Windows.Forms.Label lblTenHienThi;
+        private System.Windows.Forms.Label lblRole;
     }
 }
