@@ -54,11 +54,6 @@
   <ItemGroup>
     <Compile Include="Controller\Account.cs" />
     <Compile Include="Core\DBConnect.cs" />
-    <Compile Include="QLSVDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSVDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,17 +120,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLSVDataSet.xsc">
-      <DependentUpon>QLSVDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLSVDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSVDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSVDataSet.xss">
-      <DependentUpon>QLSVDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
