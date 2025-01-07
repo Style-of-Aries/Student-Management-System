@@ -43,9 +43,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnBanner.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,6 +161,7 @@
             this.btnLopHoc.TabIndex = 9;
             this.btnLopHoc.Text = "Lớp học";
             this.btnLopHoc.UseVisualStyleBackColor = false;
+            this.btnLopHoc.Click += new System.EventHandler(this.btnLopHoc_Click);
             // 
             // btnSinhVien
             // 
@@ -171,6 +174,7 @@
             this.btnSinhVien.TabIndex = 8;
             this.btnSinhVien.Text = "Sinh viên";
             this.btnSinhVien.UseVisualStyleBackColor = false;
+            this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
             // 
             // btnDangXuat
             // 
@@ -189,6 +193,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(266, 66);
             this.panel2.Name = "panel2";
@@ -218,6 +223,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Management System";
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(918, 555);
+            this.panel4.TabIndex = 0;
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +250,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -259,5 +273,6 @@
         private System.Windows.Forms.Button btnKhoa;
         private System.Windows.Forms.Label lblTenHienThi;
         private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Panel panel4;
     }
 }

@@ -21,7 +21,7 @@ namespace QLSV_App
             InitializeComponent();
             loadTaiKhoanList();
         }
-
+        #region Event
         private void dtgvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         { 
             
@@ -32,34 +32,8 @@ namespace QLSV_App
             
         }
 
-        //Hàm hiển thị danh sách tài khoản
-        #region method
-        void loadTaiKhoanList()
-        {
-            db.OpenConnection();
-            string query = "select * from TaiKhoan";
-            SqlCommand cmd = new SqlCommand(query, db.GetConnection());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            dtgvTaiKhoan.DataSource = table;
-            //SqlDataAdapter adapter = new SqlDataAdapter(query, db.GetConnection());
-            //SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-            //DataSet ds = new DataSet();
-            //adapter.Fill(ds);
-            //dtgvTaiKhoan.DataSource = ds.Tables[0];
-            db.CloseConnection();
-            dtgvTaiKhoan.Columns[1].HeaderText = "Tên tài khoản";
-            dtgvTaiKhoan.Columns[2].HeaderText = "Mật khẩu";
-            dtgvTaiKhoan.Columns[3].HeaderText = "Email";
-            dtgvTaiKhoan.Columns[4].HeaderText = "Số điện thoại";
-            dtgvTaiKhoan.Columns[5].HeaderText = "Ngày sinh";
-            dtgvTaiKhoan.Columns[6].HeaderText = "Giới tính";
-            dtgvTaiKhoan.Columns[7].HeaderText = "Quyền truy cập";
-            dtgvTaiKhoan.Columns[8].HeaderText = "Tên hiển thị";
-            dtgvTaiKhoan.ReadOnly = true;
-        }
-        #endregion
+        
+        
 
         
         private void radNam_CheckedChanged(object sender, EventArgs e)
@@ -161,6 +135,35 @@ namespace QLSV_App
             }
             
         }
+        #endregion
+        #region Method
+        //Hàm hiển thị danh sách tài khoản
+        void loadTaiKhoanList()
+        {
+            db.OpenConnection();
+            string query = "select * from TaiKhoan";
+            SqlCommand cmd = new SqlCommand(query, db.GetConnection());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dtgvTaiKhoan.DataSource = table;
+            //SqlDataAdapter adapter = new SqlDataAdapter(query, db.GetConnection());
+            //SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            //DataSet ds = new DataSet();
+            //adapter.Fill(ds);
+            //dtgvTaiKhoan.DataSource = ds.Tables[0];
+            db.CloseConnection();
+            dtgvTaiKhoan.Columns[1].HeaderText = "Tên tài khoản";
+            dtgvTaiKhoan.Columns[2].HeaderText = "Mật khẩu";
+            dtgvTaiKhoan.Columns[3].HeaderText = "Email";
+            dtgvTaiKhoan.Columns[4].HeaderText = "Số điện thoại";
+            dtgvTaiKhoan.Columns[5].HeaderText = "Ngày sinh";
+            dtgvTaiKhoan.Columns[6].HeaderText = "Giới tính";
+            dtgvTaiKhoan.Columns[7].HeaderText = "Quyền truy cập";
+            dtgvTaiKhoan.Columns[8].HeaderText = "Tên hiển thị";
+            dtgvTaiKhoan.ReadOnly = true;
+        }
+        #endregion
     }
 
 }

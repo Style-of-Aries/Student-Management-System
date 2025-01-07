@@ -14,7 +14,7 @@ namespace QLSV_App
 {
     public partial class frmLogin : Form
     {
-        public static string loginName;
+        public static string loginName; // Lấy tên tài khoản đăng nhập để form Home sử dụng
 
         //DBConnection db = new DBConnection();
         public frmLogin()
@@ -22,7 +22,7 @@ namespace QLSV_App
             InitializeComponent();
             
         }
-
+        #region Event
         private void lblX_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -256,12 +256,16 @@ namespace QLSV_App
         {
             
         }
-        #region method
-        bool Login(string userName, string passWord, string Role)
+        #endregion
+        #region Method
+        private bool Login(string userName, string passWord, string Role)
         {
             return Account.Instance.Login(userName, passWord, Role);
         }
         #endregion
+        
+        
     }
+    
 
 }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.pnLogin = new System.Windows.Forms.Panel();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.cboRole = new System.Windows.Forms.ComboBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.lblX = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboRole = new System.Windows.Forms.ComboBox();
-            this.lblRole = new System.Windows.Forms.Label();
             this.pnLogin.SuspendLayout();
             this.pnBanner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,6 +79,29 @@
             this.pnLogin.Size = new System.Drawing.Size(323, 318);
             this.pnLogin.TabIndex = 0;
             // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.Location = new System.Drawing.Point(54, 76);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(36, 16);
+            this.lblRole.TabIndex = 5;
+            this.lblRole.Text = "Role";
+            // 
+            // cboRole
+            // 
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.Items.AddRange(new object[] {
+            "Select Role",
+            "Admin",
+            "Manager"});
+            this.cboRole.Location = new System.Drawing.Point(73, 95);
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(192, 21);
+            this.cboRole.TabIndex = 4;
+            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
+            // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
@@ -94,6 +117,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(73, 202);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(192, 22);
             this.txtPassword.TabIndex = 2;
             // 
@@ -169,29 +193,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // cboRole
-            // 
-            this.cboRole.FormattingEnabled = true;
-            this.cboRole.Items.AddRange(new object[] {
-            "Select Role",
-            "Admin",
-            "Manager"});
-            this.cboRole.Location = new System.Drawing.Point(73, 95);
-            this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(192, 21);
-            this.cboRole.TabIndex = 4;
-            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
-            // 
-            // lblRole
-            // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(54, 76);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(36, 16);
-            this.lblRole.TabIndex = 5;
-            this.lblRole.Text = "Role";
             // 
             // frmLogin
             // 

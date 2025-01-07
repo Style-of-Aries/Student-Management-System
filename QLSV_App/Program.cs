@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLSV_App.Views;
 
 namespace QLSV_App
 {
@@ -17,7 +18,7 @@ namespace QLSV_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            //Application.Run(new FrmSinhVien());
             Application.Run(new frmLogin());
         }
     }

@@ -267,7 +267,7 @@
             this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(2, 227);
+            this.btnThem.Location = new System.Drawing.Point(155, 227);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(118, 44);
             this.btnThem.TabIndex = 14;
@@ -280,7 +280,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(126, 227);
+            this.btnXoa.Location = new System.Drawing.Point(279, 227);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(118, 44);
             this.btnXoa.TabIndex = 15;
@@ -293,7 +293,7 @@
             this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(250, 227);
+            this.btnSua.Location = new System.Drawing.Point(403, 227);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(118, 44);
             this.btnSua.TabIndex = 16;

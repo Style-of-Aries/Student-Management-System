@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLSV_App.Controller;
 using QLSV_App.Core;
 
 namespace QLSV_App.Views
@@ -19,8 +20,10 @@ namespace QLSV_App.Views
         {
             InitializeComponent();
         }
-
-        void loadNganhHocList()
+        
+        
+        #region Method
+        private void loadNganhHocList()
         {
             db.OpenConnection();
             string query = "select MaNganh,TenNganh,TenKhoa from NganhHoc inner join Khoa on NganhHoc.MaKhoa = Khoa.MaKhoa where TenKhoa = @TenKhoa";
@@ -36,20 +39,24 @@ namespace QLSV_App.Views
             dtgvNganh.Columns[1].HeaderText = "Tên ngành";
             dtgvNganh.Columns[2].HeaderText = "Tên khoa";
         }
-        void loadCboKhoa()
+        private void loadCboKhoa()
         {
-            db.OpenConnection();
-            string query = "select * from Khoa";
-            SqlCommand cmd = new SqlCommand(query, db.GetConnection());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            cboKhoa.DataSource = table;
-            cboKhoa.DisplayMember = "TenKhoa";
-            cboKhoa.ValueMember = "MaKhoa";
-            db.CloseConnection();
+            //db.OpenConnection();
+            //string query = "select * from Khoa";
+            //SqlCommand cmd = new SqlCommand(query, db.GetConnection());
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            //DataTable table = new DataTable();
+            //adapter.Fill(table);
+            //cboKhoa.DataSource = table;
+            //cboKhoa.DisplayMember = "TenKhoa";
+            //cboKhoa.ValueMember = "MaKhoa";
+            //db.CloseConnection();
+            dataKhoaList khoaList = new dataKhoaList();
+            khoaList.loadCboKhoa(cboKhoa);
         }
+        #endregion
 
+        #region Event
         private void dtgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaNganh.Text = dtgvNganh.CurrentRow.Cells[0].Value.ToString();
@@ -136,5 +143,6 @@ namespace QLSV_App.Views
 
             }
         }
+        #endregion
     }
 }

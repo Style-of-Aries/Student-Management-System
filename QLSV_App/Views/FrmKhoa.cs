@@ -21,21 +21,7 @@ namespace QLSV_App
             
             loadKhoaList();
         }
-
-        void loadKhoaList()
-        {
-            db.OpenConnection();
-            string query = "select * from Khoa";
-            SqlCommand cmd = new SqlCommand(query, db.GetConnection());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            dtgvKhoa.DataSource = table;
-            db.CloseConnection();
-            dtgvKhoa.Columns[0].HeaderText = "Mã khoa";
-            dtgvKhoa.Columns[1].HeaderText = "Tên khoa";
-        }
-
+        #region Event
         private void dtgvKhoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -109,5 +95,22 @@ namespace QLSV_App
                     MessageBoxIcon.Error);
             }
         }
+        #endregion
+        #region Method
+        private void loadKhoaList()
+        {
+            db.OpenConnection();
+            string query = "select * from Khoa";
+            SqlCommand cmd = new SqlCommand(query, db.GetConnection());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dtgvKhoa.DataSource = table;
+            db.CloseConnection();
+            dtgvKhoa.Columns[0].HeaderText = "Mã khoa";
+            dtgvKhoa.Columns[1].HeaderText = "Tên khoa";
+        }
+        #endregion
+
     }
 }
