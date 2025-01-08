@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSinhVien));
             this.dtgvSinhVien = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTuKhoa = new System.Windows.Forms.Label();
+            this.txtTuKhoa = new System.Windows.Forms.TextBox();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.lblGioiTinh = new System.Windows.Forms.Label();
@@ -58,8 +61,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.lblTuKhoa = new System.Windows.Forms.Label();
-            this.txtTuKhoa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,6 +110,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(842, 267);
             this.panel2.TabIndex = 17;
+            // 
+            // lblTuKhoa
+            // 
+            this.lblTuKhoa.AutoSize = true;
+            this.lblTuKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTuKhoa.Location = new System.Drawing.Point(182, 230);
+            this.lblTuKhoa.Name = "lblTuKhoa";
+            this.lblTuKhoa.Size = new System.Drawing.Size(142, 18);
+            this.lblTuKhoa.TabIndex = 32;
+            this.lblTuKhoa.Text = "Mã sinh viên cần tìm";
+            // 
+            // txtTuKhoa
+            // 
+            this.txtTuKhoa.Location = new System.Drawing.Point(330, 231);
+            this.txtTuKhoa.Name = "txtTuKhoa";
+            this.txtTuKhoa.Size = new System.Drawing.Size(197, 20);
+            this.txtTuKhoa.TabIndex = 33;
             // 
             // radNu
             // 
@@ -386,23 +404,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // lblTuKhoa
-            // 
-            this.lblTuKhoa.AutoSize = true;
-            this.lblTuKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTuKhoa.Location = new System.Drawing.Point(182, 230);
-            this.lblTuKhoa.Name = "lblTuKhoa";
-            this.lblTuKhoa.Size = new System.Drawing.Size(142, 18);
-            this.lblTuKhoa.TabIndex = 32;
-            this.lblTuKhoa.Text = "Mã sinh viên cần tìm";
-            // 
-            // txtTuKhoa
-            // 
-            this.txtTuKhoa.Location = new System.Drawing.Point(330, 231);
-            this.txtTuKhoa.Name = "txtTuKhoa";
-            this.txtTuKhoa.Size = new System.Drawing.Size(197, 20);
-            this.txtTuKhoa.TabIndex = 33;
-            // 
             // FrmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +412,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgvSinhVien);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

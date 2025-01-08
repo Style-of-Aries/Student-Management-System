@@ -99,7 +99,7 @@ namespace QLSV_App.Views
         private void loadLopHocList()
         {
             db.OpenConnection();
-            string query = "select MaLop, TenLop, SiSo, NganhHoc.MaNganh from Lop inner join NganhHoc on Lop.MaNganh = NganhHoc.MaNganh where TenNganh = @TenNganh";
+            string query = "select MaLop, TenLop, SiSo, NganhHoc.MaNganh from Lop inner join NganhHoc on Lop.MaNganh = NganhHoc.MaNganh where TenNganh = @TenNganh update Lop set SiSo = (select count(*) from SinhVien where Lop.MaLop = SinhVien.MaLop)";
             SqlCommand cmd = new SqlCommand(query, db.GetConnection());
             cmd.Parameters.AddWithValue("@TenNganh", cboNganh.Text.Trim());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);

@@ -73,11 +73,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể xóa tài khoản này",
-                     "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
                 //db.OpenConnection();
                 //string query = "delete from TaiKhoan where TenTaiKhoan = '" + txtTenTaiKhoan.Text + "'";
@@ -100,11 +96,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể thêm tài khoản này",
-                     "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
                 //db.OpenConnection();
                 //string query = "insert into TaiKhoan values ('" + txtTenTaiKhoan.Text + "', '" + txtMatKhau.Text + "', '" + txtEmail.Text + "', '" + txtSoDT.Text + "', '" + dateTimePicker1.Value + "', N'" + (radNam.Checked ? radNam.Text : radNu.Text) + "', '" + cboQuyenTruyCap.Text + "', N'" + txtTenHienThi.Text + "')";
@@ -127,11 +119,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể sửa tài khoản này",
-                     "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             
         }

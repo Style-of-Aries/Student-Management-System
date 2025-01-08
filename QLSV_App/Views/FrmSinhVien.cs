@@ -53,9 +53,9 @@ namespace QLSV_App.Views
         private void loadSinhVienList()
         {
             db.OpenConnection();
-            string query = "select * from SinhVien where MaLop = @MaLop";
+            string query = "select MaSV, TenSV, NgaySinh, GioiTinh, DiaChi, SoDienThoai, Cccd, Email, Lop.MaLop from SinhVien inner join Lop on SinhVien.MaLop = Lop.MaLop where TenLop = @TenLop";
             SqlCommand cmd = new SqlCommand(query, db.GetConnection());
-            cmd.Parameters.AddWithValue("@MaLop", getMaLop());
+            cmd.Parameters.AddWithValue("@TenLop", cboLop.Text.Trim());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             adapter.Fill(table);

@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLop));
             this.dtgvLop = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboNganh = new System.Windows.Forms.ComboBox();
             this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.lblKhoa = new System.Windows.Forms.Label();
             this.lblMaNganh = new System.Windows.Forms.Label();
@@ -40,8 +43,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.cboNganh = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLop)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,6 +75,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(663, 179);
             this.panel2.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(164, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 18);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tên lớp";
+            // 
+            // cboNganh
+            // 
+            this.cboNganh.FormattingEnabled = true;
+            this.cboNganh.Location = new System.Drawing.Point(391, 16);
+            this.cboNganh.Name = "cboNganh";
+            this.cboNganh.Size = new System.Drawing.Size(237, 21);
+            this.cboNganh.TabIndex = 13;
+            this.cboNganh.SelectedIndexChanged += new System.EventHandler(this.cboNganh_SelectedIndexChanged);
             // 
             // cboKhoa
             // 
@@ -180,25 +200,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // cboNganh
-            // 
-            this.cboNganh.FormattingEnabled = true;
-            this.cboNganh.Location = new System.Drawing.Point(391, 16);
-            this.cboNganh.Name = "cboNganh";
-            this.cboNganh.Size = new System.Drawing.Size(237, 21);
-            this.cboNganh.TabIndex = 13;
-            this.cboNganh.SelectedIndexChanged += new System.EventHandler(this.cboNganh_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 18);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tên lớp";
-            // 
             // FrmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +208,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgvLop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

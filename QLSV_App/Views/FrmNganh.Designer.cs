@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNganh));
             this.dtgvNganh = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cboKhoa = new System.Windows.Forms.ComboBox();
@@ -172,6 +173,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dtgvNganh);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmNganh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

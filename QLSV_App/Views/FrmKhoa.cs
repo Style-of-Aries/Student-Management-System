@@ -46,11 +46,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể thêm khoa này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
@@ -67,11 +63,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể xóa khoa này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
@@ -88,11 +80,7 @@ namespace QLSV_App
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể sửa khoa này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
         #endregion

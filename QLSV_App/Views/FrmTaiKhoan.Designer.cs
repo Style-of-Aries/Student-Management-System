@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTaiKhoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.radNam = new System.Windows.Forms.RadioButton();
@@ -312,6 +313,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

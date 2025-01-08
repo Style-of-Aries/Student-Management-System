@@ -124,3 +124,16 @@ select MaSV, TenSV, NgaySinh, GioiTinh, DiaChi, SoDienThoai, cccd, Email, Lop.Ma
 end
 
 exec sp_GetSinhVienByLop N'2623ENG04'
+
+select * from SinhVien
+select count(*) as 'Sĩ số' from SinhVien 
+
+select MaLop, TenLop, MaNganh, SiSo from Lop update Lop set SiSo = (select count(*) from SinhVien where Lop.MaLop = SinhVien.MaLop)
+declare @TenNganh nvarchar(50)
+set @TenNganh = N'Ngôn ngữ Anh'
+
+declare @TenLop nvarchar(50)
+set @TenLop = N'2623ENG02'
+select MaSV, TenSV, NgaySinh, GioiTinh, DiaChi, SoDienThoai, Cccd, Email, Lop.MaLop from SinhVien inner join Lop on SinhVien.MaLop = Lop.MaLop where TenLop = @TenLop
+
+select MaLop, TenLop, SiSo, NganhHoc.MaNganh from Lop inner join NganhHoc on Lop.MaNganh = NganhHoc.MaNganh where TenNganh = @TenNganh update Lop set SiSo = (select count(*) from SinhVien where Lop.MaLop = SinhVien.MaLop)

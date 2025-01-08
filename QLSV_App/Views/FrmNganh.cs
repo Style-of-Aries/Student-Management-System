@@ -26,7 +26,7 @@ namespace QLSV_App.Views
         private void loadNganhHocList()
         {
             db.OpenConnection();
-            string query = "select MaNganh,TenNganh,TenKhoa from NganhHoc inner join Khoa on NganhHoc.MaKhoa = Khoa.MaKhoa where TenKhoa = @TenKhoa";
+            string query = "select MaNganh,TenNganh,Khoa.MaKhoa from NganhHoc inner join Khoa on NganhHoc.MaKhoa = Khoa.MaKhoa where TenKhoa = @TenKhoa";
             SqlCommand cmd = new SqlCommand(query, db.GetConnection());
             cmd.Parameters.AddWithValue("@TenKhoa", cboKhoa.Text.Trim());
 
@@ -37,7 +37,7 @@ namespace QLSV_App.Views
             db.CloseConnection();
             dtgvNganh.Columns[0].HeaderText = "Mã ngành";
             dtgvNganh.Columns[1].HeaderText = "Tên ngành";
-            dtgvNganh.Columns[2].HeaderText = "Tên khoa";
+            dtgvNganh.Columns[2].HeaderText = "Mã khoa";
         }
         private void loadCboKhoa()
         {
@@ -92,11 +92,7 @@ namespace QLSV_App.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể thêm ngành này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
@@ -113,11 +109,7 @@ namespace QLSV_App.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể xóa ngành này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
@@ -135,11 +127,7 @@ namespace QLSV_App.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show
-                    ("Không thể sửa ngành này",
-                    "error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + ex.Message);
 
             }
         }
