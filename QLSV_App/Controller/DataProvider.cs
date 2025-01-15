@@ -10,7 +10,7 @@ namespace QLSV_App.Controller
 {
     public class DataProvider
     {
-        private string connectionSTR = "Data Source=STYLE-OF-ARIES\\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True";
+        private string connectionSTR = "Data Source=\\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

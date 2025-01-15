@@ -9,7 +9,7 @@ namespace QLSV_App.Core
 {
     public class DBConnect
     {
-            private SqlConnection con = new SqlConnection("Data Source=STYLE-OF-ARIES\\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True");
+            private SqlConnection con = new SqlConnection("Data Source=\\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True");
             public SqlConnection GetConnection()
             {
                 return con;
