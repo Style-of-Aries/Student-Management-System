@@ -76,7 +76,7 @@
             this.btnKhoa.Name = "btnKhoa";
             this.btnKhoa.Size = new System.Drawing.Size(235, 52);
             this.btnKhoa.TabIndex = 19;
-            this.btnKhoa.Text = "Khoa";
+            this.btnKhoa.Text = "Quản lý khoa";
             this.btnKhoa.UseVisualStyleBackColor = false;
             this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
             // 
@@ -89,7 +89,7 @@
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(235, 52);
             this.btnTaiKhoan.TabIndex = 15;
-            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.Text = "Quản lý tài khoản";
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
@@ -146,7 +146,7 @@
             this.btnNganhHoc.Name = "btnNganhHoc";
             this.btnNganhHoc.Size = new System.Drawing.Size(235, 52);
             this.btnNganhHoc.TabIndex = 12;
-            this.btnNganhHoc.Text = "Ngành học";
+            this.btnNganhHoc.Text = "Quản lý ngành học";
             this.btnNganhHoc.UseVisualStyleBackColor = false;
             this.btnNganhHoc.Click += new System.EventHandler(this.btnNganhHoc_Click);
             // 
@@ -159,7 +159,7 @@
             this.btnLopHoc.Name = "btnLopHoc";
             this.btnLopHoc.Size = new System.Drawing.Size(235, 52);
             this.btnLopHoc.TabIndex = 9;
-            this.btnLopHoc.Text = "Lớp học";
+            this.btnLopHoc.Text = "Quản lý lớp học";
             this.btnLopHoc.UseVisualStyleBackColor = false;
             this.btnLopHoc.Click += new System.EventHandler(this.btnLopHoc_Click);
             // 
@@ -172,7 +172,7 @@
             this.btnSinhVien.Name = "btnSinhVien";
             this.btnSinhVien.Size = new System.Drawing.Size(235, 52);
             this.btnSinhVien.TabIndex = 8;
-            this.btnSinhVien.Text = "Sinh viên";
+            this.btnSinhVien.Text = "Quản lý sinh viên";
             this.btnSinhVien.UseVisualStyleBackColor = false;
             this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
             // 
